@@ -17,7 +17,8 @@ const personRoute = router.personRoute;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //listen on port 8888
-app.listen('8000', () => console.log('Listening on port 8000'));
+const PORT = process.env.PORT || 9999;
+app.listen(PORT, () => console.log('Listening on port', PORT));
 
 
 
