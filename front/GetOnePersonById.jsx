@@ -2,13 +2,13 @@ import React from 'react';
 import $ from 'jquery';
 import {Link} from 'react-router'
 
-const SearchByName = React.createClass({
+const GetOnePersonById = React.createClass({
   getInitialState(){
     return {searchResult:[]}
   },
   submitSearch: function (e) {
     $.ajax({
-		  url: "/api/people/search/" + this.state.searchResult,
+		  url: "/api/people/" + this.state.searchResult,
 		  method:'GET'
 	})
 	.done((data)=>this.setState({searchResult:data}))
@@ -21,24 +21,47 @@ const SearchByName = React.createClass({
  
   render(){
     console.log('ARE YOU GETTING DATA ON Search?',this.state.searchResult)
-    
+    console.log('name',this.state.searchResult.name)
     return(
     <div>
       <center>
+      <h1>Enter Person Id</h1>
         <form>
-          <input style={searchBar} placeholder="Quick Search" onChange={this.handleChange}/><br/>
+          <input style={searchBar} placeholder="Enter Person Id" onChange={this.handleChange}/><br/>
 
           <input onClick={this.submitSearch} type="button" value="Search"/>
         </form>
 
         <div className='middle'>
-          {this.state.searchResult.map((ele,i)=>{
+
+
+        <table>
+            <tbody>
+                <tr>
+                  <td style={tableData}>ID: {this.state.searchResult.id}</td>
+                  <td style={tableData}>Name: {this.state.searchResult.name}</td>
+                  <td style={tableData}>City: {this.state.searchResult.favoriteCity}</td>
+
+                  <td><Link to={'/update-info/' + this.state.searchResult.id}><button>Update</button></Link></td>
+
+                  <td><Link to={'/delete-user/' + this.state.searchResult.id}><button>Delete</button></Link></td>
+                </tr>
+              </tbody> 
+          </table>
+
+
+       
+
+
+        
+
+    {/*      {this.state.searchResult.map((ele,i)=>{
           return <table key={i}>
             <tbody>
                 <tr>
-                  <td style={tableData}>Id: {ele.id}</td>
-                  <td style={tableData}>Name: {ele.name}</td>
-                  <td style={tableData}>City: {ele.favoriteCity}</td>
+                  <td style={tableData}>{ele.id}</td>
+                  <td style={tableData}>{ele.name}</td>
+                  <td style={tableData}>{ele.favoriteCity}</td>
 
                   <td><Link to={'/update-info/' + ele.id}><button>Update</button></Link></td>
 
@@ -47,6 +70,9 @@ const SearchByName = React.createClass({
               </tbody> 
           </table>
           })}
+
+*/}
+
         </div>
         <div className="searchEmpty-container"></div>
       </center>
@@ -75,4 +101,4 @@ var searchBar = {
   transition: "all 250ms ease-out",
 }
 
-export default SearchByName;
+export default GetOnePersonById;

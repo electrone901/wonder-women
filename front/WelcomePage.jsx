@@ -36,7 +36,7 @@ var title = {
   marginTop: "-480px",
   fontWeight: "900",
   fontFamily: "Roboto", 
-  fontSize: "55px",
+  fontSize: "45px",
   color: "#32ff04",
   textTransform: "uppercase",
   backgroundColor: "rgba(0, 0, 0, 0.22)",
@@ -44,7 +44,7 @@ var title = {
 var title2 = {
   fontWeight: "900",
   fontFamily: "Roboto", 
-  fontSize: "50px",
+  fontSize: "40px",
   color: "#32ff04",
   textTransform: "uppercase",
   marginTop: "-11px",

@@ -9,6 +9,7 @@ import DeletePerson from './DeletePerson';
 import SuccessfullyUpdated from './SuccessfullyUpdated';
 import CreatePerson from './CreatePerson';
 import SearchByName from './SearchByName';
+import GetOnePersonById from './GetOnePersonById';
 
 const App = React.createClass({
 	render(){
@@ -31,6 +32,7 @@ ReactDom.render(
       <Route path="successfuly-updated/:personId" component={SuccessfullyUpdated} /> 
       <Route path="search-by-name" component={SearchByName} /> 
       <Route path="add-new-person" component={CreatePerson} /> 
+      <Route path="search-by-id" component={GetOnePersonById} /> 
     </Route>
   </Router>,
 	document.getElementById('app')
