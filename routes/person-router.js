@@ -41,29 +41,22 @@ const updatePerson = (req, res) => {
 		.then((data) => res.send(data));
 };
 
-
-// 	.then((postInfo)=>postInfo.update({
-// 		  title: body.title,
-// 		  image: body.image,	  
-// 		  body: body.body,	  
-// 		  author: body.author,	  
-// 		  tags: body.tags,	
-// 		  price: body.price,  
-// 		  phone: body.phone, 
-// 		  year: body.year,
-// 		  brand: body.brand,
-// 		  location: body.location,    
-// 		  payments_accepted: body.payments_accepted
-// 	})
-//    )
-// 	.then((data)=> res.send(data))
-// })
-
-
 // DELETE A PERSON
 const deletePerson = (req,res)=>{
 	Person.destroy({where:{id:req.params.id}})
 	.then((id)=>{res.send(id.name + ' has been deleted!')})
+}
+
+//SEARCH  any:key I defined,use to access the req. 
+const searchByName = (req,res)=>{
+	Person.findAll({
+	  where: {
+	    name: {
+	      $like: '%' + req.params.name + '%'
+		}
+	  }
+	})
+	.then((data)=>res.send(data))
 }
 
 
@@ -77,6 +70,11 @@ router.route('/:id')
  .get(getOnePerson)
  .delete(deletePerson)
  .put(updatePerson)
+
+
+router.route('/search/:name')
+.get(searchByName)
+
 
 
 module.exports = router

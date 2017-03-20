@@ -11,15 +11,14 @@ app.use(express.static(path.join(__dirname, '/front/bundle')));
 const router = require('./routes');
 const personRoute = router.personRoute;
 
-
+//CALL FILE, CREATE DB
 require('./seeds/person-seed.js')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//listen on port 8888
+//HEROKU PORT
 const PORT = process.env.PORT || 9999;
 app.listen(PORT, () => console.log('Listening on port', PORT));
-
 
 
 //ROUTER URL PATHS//

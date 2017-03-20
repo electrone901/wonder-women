@@ -21,24 +21,27 @@ componentDidMount: function () {
   render() {
     return (
       <div className="container">
-	      <h1 style={tableData1} >People List</h1>
+	      <center><h1 style={title}>People List</h1></center>
         <table>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Actions</th>
+              <th style={tableData}>ID</th>
+              <th style={tableData}>Name</th>
+              <th style={tableData}>City</th>
+              <th style={tableData}>Actions</th>
             </tr>
           </thead>
         </table>
+
+
 	      {this.state.persons.map((ele,i)=>{
 	        return <table key={i}>
               
               <tbody>
                 <tr>
-                  <td >{ele.id}</td>
-                  <td className="tableData">{ele.name}</td>
-                  <td className="tableData">{ele.favoriteCity}</td>
+                  <td style={tableData}>{ele.id}</td>
+                  <td style={tableData}>{ele.name}</td>
+                  <td style={tableData}>{ele.favoriteCity}</td>
 
                   <td><Link to={'/update-info/' + ele.id}><button>Update</button></Link></td>
                   
@@ -46,13 +49,21 @@ componentDidMount: function () {
                 </tr>
               </tbody> 
           </table>
+
 	      })}
       </div>
     )
   }
 })
-var tableData1 = {
-  backgroundColor: "red",
+var title = {
+  backgroundColor: "rgba(0, 255, 102, 0.88)",
+}
+
+var tableData = {
+  // backgroundColor: "yellow",
+  width: "250px",
+  height: "20px",
+  padding: "10px",
 }
 export default Persons;
 

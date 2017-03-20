@@ -8,12 +8,12 @@ import UpdateOnePerson from './UpdateOnePerson';
 import DeletePerson from './DeletePerson';
 import SuccessfullyUpdated from './SuccessfullyUpdated';
 import CreatePerson from './CreatePerson';
+import SearchByName from './SearchByName';
 
 const App = React.createClass({
 	render(){
 		return(
 			<div>
-      <h1>spotify-challenge</h1>
 			<Navbar />
 			{this.props.children}
 			</div>
@@ -29,7 +29,7 @@ ReactDom.render(
       <Route path="update-info/:personId" component={UpdateOnePerson} /> 
       <Route path="delete-user/:personId" component={DeletePerson} /> 
       <Route path="successfuly-updated/:personId" component={SuccessfullyUpdated} /> 
-
+      <Route path="search-by-name" component={SearchByName} /> 
       <Route path="add-new-person" component={CreatePerson} /> 
     </Route>
   </Router>,

@@ -6,10 +6,6 @@ html, body {
     padding-top: 10px;
 
   }
-
-/*body {
-    padding-top: 10px;
-  }*/
   @media (min-width: 1200px)
 .container {
     width: 1170px;
@@ -22,6 +18,19 @@ html, body {
 .container {
     width: 750px;
         margin-top: 7px;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 600px){
+    .input-group, .social {
+    display: none !important;
+  }
+}
+
+
+.a.logoWidth {
+  width: 300px;
 }
 .container {
     margin-right: auto;
@@ -36,26 +45,11 @@ html, body {
   font-weight: bolder;
   
 }
-
 .active {
   font-size: 16px;
 }
 
-.socialSearch {
-  display: -webkit-box; 
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-top: -52px;
-    height: 119px;
-    margin-left: 373px;
-    width: 450px;
 
-}
 
 
 /*SEARCH BAR*/
@@ -75,13 +69,7 @@ html, body {
 }
 
 
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 600px){
-    .input-group, .social {
-    display: none !important;
-  }
-}
+
 
 /*SEARCH BUTTON*/
 .btn{
@@ -93,9 +81,7 @@ html, body {
 .logo, .input-group{
   display: inline-block;
 }
-.a.logoWidth {
-  width: 300px;
-}
+
 
 .col-xs-5 {
     width: 8.666667%;
