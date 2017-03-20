@@ -12,7 +12,7 @@ const router = require('./routes');
 const personRoute = router.personRoute;
 
 
-
+require('./seeds/person-seed.js')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
