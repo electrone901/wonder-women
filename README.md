@@ -1,5 +1,8 @@
 # FRIENDS APP
-To complete this question you will need to write both a client and a server. We are agnostic to how you design the client (mobile web, iOS, Android, desktop web) but it will need to be able to make HTTP requests to a specific endpoints.  The server you create will also need to be able to respond to HTTP requests to specific endpoints.  It is not important what language or framework you use to build your server.
+Developed a web app that facilitates and simplifies management of your friend lists. Built features for add, delete, read and edit friends from the list using Sequelize, PostgreSQL, and React.
+Implemented AJAX calls from a RESTful JSON API to connect to the React front end for seamless updates.
+Multi Page web app capable of request and response different resources using react-router 
+I wrote both a client and a server. We are agnostic to how you design the client (mobile web, iOS, Android, desktop web) but it will need to be able to make HTTP requests to a specific endpoints.  The server you create will also need to be able to respond to HTTP requests to specific endpoints.  It is not important what language or framework you use to build your server.
 
 The client should do the following in order
 Make a GET request to /people
