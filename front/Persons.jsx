@@ -60,7 +60,6 @@ var title = {
 }
 
 var tableData = {
-  // backgroundColor: "yellow",
   width: "250px",
   height: "20px",
   padding: "10px",

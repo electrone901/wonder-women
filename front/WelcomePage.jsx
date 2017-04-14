@@ -13,10 +13,10 @@ const WelcomePage = React.createClass({
 						<div class="row">
             	<div class="col-lg-12">
               	<div class="intro-message">
-                	<center><h1 style={title}>Welcome To The Spotify NYC Technology</h1><br/>
-                	<h2 style={title2}>Fellowship Program Challenge</h2><br/></center>
+                	<center><h1 style={title}>Welcome To Friends App it simplifies </h1><br/>
+                  <h2 style={title2}> management of your friend lists</h2><br/></center>
                        <Link to="/people"><input style={button1} type="button" value="Explore"/></Link>
-                       <Link to="/people"><input style={button1} type="button" value="Get Instructions"/></Link>
+                       <a href="https://docs.google.com/document/d/1oEHkFrLh9xfSzniOyGh2J_K_TlxzqUGNxXnI5cu-BSQ/edit?usp=sharing"target="_blank"><input style={button1} type="button" value="Get Instructions"/></a>
 
                    </div>
                </div>

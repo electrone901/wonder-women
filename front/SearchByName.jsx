@@ -18,10 +18,7 @@ const SearchByName = React.createClass({
 	this.setState({searchResult: e.currentTarget.value})
   },
 
- 
   render(){
-    console.log('ARE YOU GETTING DATA ON Search?',this.state.searchResult)
-    
     return(
     <div>
       <center>

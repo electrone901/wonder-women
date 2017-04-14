@@ -20,8 +20,6 @@ const GetOnePersonById = React.createClass({
 
  
   render(){
-    console.log('ARE YOU GETTING DATA ON Search?',this.state.searchResult)
-    console.log('name',this.state.searchResult.name)
     return(
     <div>
       <center>
@@ -48,31 +46,6 @@ const GetOnePersonById = React.createClass({
                 </tr>
               </tbody> 
           </table>
-
-
-       
-
-
-        
-
-    {/*      {this.state.searchResult.map((ele,i)=>{
-          return <table key={i}>
-            <tbody>
-                <tr>
-                  <td style={tableData}>{ele.id}</td>
-                  <td style={tableData}>{ele.name}</td>
-                  <td style={tableData}>{ele.favoriteCity}</td>
-
-                  <td><Link to={'/update-info/' + ele.id}><button>Update</button></Link></td>
-
-                  <td><Link to={'/delete-user/' + ele.id}><button>Delete</button></Link></td>
-                </tr>
-              </tbody> 
-          </table>
-          })}
-
-*/}
-
         </div>
         <div className="searchEmpty-container"></div>
       </center>
