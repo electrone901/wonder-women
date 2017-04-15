@@ -39,13 +39,14 @@ var UpdateOnePerson = React.createClass({
         <center>
   	      <h1>Update Person's Information</h1>
   	      <form>
-             Name:          <br/>
+             Edit Name:          <br/>
             <textarea onChange={this.handleChange.bind(this, 'name')}>
                 {this.props.person1} 
             </textarea><br/><br/>
 
-             Favorite City:        <br/>
+              Edit Favorite City:        <br/>
             <textarea onChange={this.handleChange.bind(this, 'favoriteCity')}type="text" name="favoriteCity">
+
                 {this.props.person1} 
             </textarea><br/><br/>
 
