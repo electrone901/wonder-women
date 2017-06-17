@@ -7,7 +7,7 @@ Person.sync({force: true})
 //add the following Person to the database:
 .then((data) => Person.bulkCreate([
   {
-  	name: 'Sean',
+  	name: 'Luis',
     favoriteCity: 'New York',
     image: 'https://electrone901.github.io/img/profile2.jpg',
     introduction: 'I am a software developer with experience in JavaScript. I completed my undergraduate studies in Computer Information Systems and subsequently volunteer as a professor’s assistant and taught HTML to students at a non-profit organization.',

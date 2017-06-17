@@ -12,6 +12,9 @@ import SearchByName from './SearchByName';
 import GetOnePersonById from './GetOnePersonById';
 import ProjectList from './ProjectList';
 import ProjectDetails from './ProjectDetails';
+import PassionOption from './PassionOption';
+import Iot from './Iot';
+import GameResults from './GameResults';
 
 const App = React.createClass({
 	render(){
@@ -32,11 +35,14 @@ ReactDom.render(
       <Route path="update-info/:personId" component={UpdateOnePerson} /> 
       <Route path="delete-user/:personId" component={DeletePerson} /> 
       <Route path="successfuly-updated/:personId" component={SuccessfullyUpdated} /> 
-      <Route path="search-by-name" component={SearchByName} /> 
+      <Route path="search" component={SearchByName} /> 
       <Route path="add-new-person" component={CreatePerson} /> 
       <Route path="search-by-id" component={GetOnePersonById} /> 
       <Route path="projects" component={ProjectList} /> 
+      <Route path="passion" component={PassionOption} /> 
       <Route path="/projects/:projectId" component={ProjectDetails} /> 
+      <Route path="/internet-of-things" component={Iot} /> 
+      <Route path="/game-results" component={GameResults} /> 
     </Route>
   </Router>,
 	document.getElementById('app')

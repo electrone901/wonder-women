@@ -44,7 +44,9 @@ const ProjectDetails = React.createClass({
   },
   componentDidMount(){
     $.ajax({
-      url: '/api/projects/'+this.props.params.id,
+      
+      // url: '/api/projects/'+this.props.params.id,
+      url: '/api/projects/1',
       method: 'GET'
     })
     .done((data)=>
@@ -53,26 +55,12 @@ const ProjectDetails = React.createClass({
   },
   
   render(){
-    console.log(this.state.playlist)
+    console.log('yyyyy: ',this.state.playlist)
     return(
-      this.state.playlist ? 
-      (<div>
-      <h1>Playlist Title: {this.state.playlist.title}</h1>
-      
-        {this.state.playlist.songs.map((song, index)=>
-          <div key={index}>
-            <h3>Title: {song.title}</h3>
-            <h3>Artist: {song.artist.name}</h3>
-            <h3>Genres: {song.genres.map((genre, index)=><p key={index}>{genre.title}</p>)}</h3>
-            <h3>Creation Date: {song.createdAt}</h3>
-            <iframe width="420" height="315"src={`${song.youtube_url.replace('watch?v=', 'embed/')}?origin=http://localhost:9999.com`}></iframe>
-            <br/>
-            <input type="button" value="-REMOVE SONG" onClick={this.deleteSongFromPlaylist.bind(this,song.title)}/>
-          </div>
-        )}
-      </div>) 
-      : <p>No Playlists!</p>
-    )
+      <div>
+        hhhhhhhh
+  </div>
+      )
   }
 })
 

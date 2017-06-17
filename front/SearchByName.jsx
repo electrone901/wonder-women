@@ -25,7 +25,9 @@ const SearchByName = React.createClass({
         <form>
           <input style={searchBar} placeholder="Quick Search" onChange={this.handleChange}/><br/>
 
-          <input onClick={this.submitSearch} type="button" value="Search"/>
+ 
+
+          <Link to={'/game-results'}><input type="button" value="Search"/></Link>
         </form>
 
         <div className='middle'>

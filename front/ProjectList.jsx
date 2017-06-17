@@ -29,6 +29,7 @@ componentDidMount: function () {
                     <td style={tableData}>Technologies: {ele.techStack}</td>
 
                       <Link to={'/projects/'+ ele.id}><h3>{ele.projectName}</h3></Link>
+                      <Link to={'/projects/'+ ele.id}><h3>{ele.id}</h3></Link>
 
                     
 
