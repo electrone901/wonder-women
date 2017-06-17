@@ -10,6 +10,8 @@ import SuccessfullyUpdated from './SuccessfullyUpdated';
 import CreatePerson from './CreatePerson';
 import SearchByName from './SearchByName';
 import GetOnePersonById from './GetOnePersonById';
+import ProjectList from './ProjectList';
+import ProjectDetails from './ProjectDetails';
 
 const App = React.createClass({
 	render(){
@@ -33,6 +35,8 @@ ReactDom.render(
       <Route path="search-by-name" component={SearchByName} /> 
       <Route path="add-new-person" component={CreatePerson} /> 
       <Route path="search-by-id" component={GetOnePersonById} /> 
+      <Route path="projects" component={ProjectList} /> 
+      <Route path="/projects/:projectId" component={ProjectDetails} /> 
     </Route>
   </Router>,
 	document.getElementById('app')

@@ -13,9 +13,11 @@ app.use(express.static(path.join(__dirname, '/front/bundle')));
 //ROUTES//
 const router = require('./routes');
 const personRoute = router.personRoute;
+const projectRoute = router.projectRoute;
 
 //CALL FILE, CREATE DB
 require('./seeds/person-seed.js')
+require('./seeds/project-seed.js')
 
 //arses the text as URL encoded data 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,6 +29,7 @@ app.listen(PORT, () => console.log('Listening on port', PORT));
 
 //ROUTER URL PATHS//
 app.use('/api/people', personRoute);
+app.use('/api/projects/', projectRoute);
 
 
 app.get('/*', (req, res) => {

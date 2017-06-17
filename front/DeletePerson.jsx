@@ -15,7 +15,6 @@ componentDidMount: function () {
     })
     .done((data)=>this.setState({persons:data}))
   },
-  
   render() {
 
     return (

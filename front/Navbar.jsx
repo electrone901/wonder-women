@@ -25,6 +25,7 @@ var Navbar = React.createClass({
                 <li className="linetext"><Link to="/add-new-person">Add A New Person</Link></li>
                 <li className="linetext"><Link to="/search-by-id">Get A Person By Id</Link></li>
                 <li className="linetext"><Link to="/search-by-name">Search By Name</Link></li>
+                <li className="linetext"><Link to="/projects">project List</Link></li>
               </ul>
             </div>
         </div>

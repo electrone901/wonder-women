@@ -19,6 +19,7 @@ componentDidMount: function () {
   },
 
   render() {
+    console.log('data:', this.state.persons)
     return (
       <div className="container">
 	      <center><h1 style={title}>People List</h1></center>
@@ -36,16 +37,17 @@ componentDidMount: function () {
 
 	      {this.state.persons.map((ele,i)=>{
 	        return <table key={i}>
-              
               <tbody>
                 <tr>
+                  <td><img style={imgProfile} src={ele.image}/></td>
                   <td style={tableData}>{ele.id}</td>
-                  <td style={tableData}>{ele.name}</td>
+                  <td style={tableData}>{
+
+
+                    
+                    ele.name}</td>
                   <td style={tableData}>{ele.favoriteCity}</td>
 
-                  <td><Link to={'/update-info/' + ele.id}><button>Update</button></Link></td>
-                  
-                  <td><Link to={'/delete-user/' + ele.id}><button>Delete</button></Link></td>
                 </tr>
               </tbody> 
           </table>
@@ -63,6 +65,10 @@ var tableData = {
   width: "250px",
   height: "20px",
   padding: "10px",
+}
+
+var imgProfile = {
+  height: "181px",
 }
 export default Persons;
 
